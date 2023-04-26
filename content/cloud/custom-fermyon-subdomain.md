@@ -13,9 +13,9 @@ url = "https://github.com/fermyon/developer/blob/main//content/cloud/custom-ferm
 - [Validate Custom Fermyon Subdomain Name](#validate-custom-fermyon-subdomain-name)
 - [Next Steps](#next-steps)
 
-Every Spin application running on Fermyon Cloud receives a domain name that has the following format: `<your-App-Name-randomlyAssignedString>.fermyon.app`. For a more easily recognizable domain name, you may want to change your Spin application's domain name from `slats-the-cat-o7jecuug.fermyon.app` to `slatsthecat.fermyon.app`. 
+Every Spin application running on Fermyon Cloud receives a domain name that has the following format: `<your-App-Name-randomlyAssignedString>.fermyon.app`. For a more easily recognizable domain name, you may want to change your Spin application's domain name from `slats-the-cat-o7jecuug.fermyon.app` to `slatsthecat.fermyon.app`.
 
-Custom Fermyon subdomain names allow you to rename the `<your-App-Name-randomyAssignedString>` subdomain. This custom Fermyon subdomain will be combined with the `.fermyon.app` apex domain to give your application a complete domain name. 
+Custom Fermyon subdomain names allow you to change the randomly generated domain name for your application.
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ Select the application whose domain name you intend to modify. Then select the *
 
 ![Cloud UI with app panel view open](../../static/image/app-panel-view-w-edit-subdomain-button.png)
 
-## Apply New Custom Fermyon Domain
+## Apply New Custom Fermyon Subdomain
 
-In the text box, you will see your application's current subdomain, followed by the apex domain `fermyon.app`. 
+In the text box, you will see your application's current domain record. 
 
 ![Custom subdomain panel with original subdomain](../../static/image/custom-subdomain-panel-original.png)
 
@@ -50,14 +50,6 @@ Then click save to apply your changes.
 If you view the application's domain name in the panel view, you should see it has been updated to reflect your custom Fermyon subdomain name.
 
 ![App panel view with custom subdomain name](../../static/image/custom-subdomain-app-panel-view.png)
-
-Visit the application's domain name to validate the change has been applied successfully.
-
-<!-- @selectiveCpy -->
-
-```bash
-$ curl quickstart.fermyon.app
-```
 
 ![Spin app responding at quickstart.fermyon.app](/static/image/quickstart-custom-subdomain.png)
 
