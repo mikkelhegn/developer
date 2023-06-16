@@ -1,0 +1,47 @@
+{{! This adds the HTML head section and the beginning of the body. See content_top.hbs. }}
+{{> content_top }}
+
+<main class="container page-wrap developer-home-wrap">
+    <div class="columns">
+
+        <article class="column content content-docs content-docs-wide">
+            <section id="intro">
+                <h1>Welcome to Spin Up Hub!</h1>
+                <p class="lead">The hub to share and inspire to write Spin applications</p>
+            </section>
+
+            <section id="items">
+                <div class="columns is-multiline">
+                <!-- cards here -->
+                {{#each (content_filter site.pages "/content/spinuphub/items/" "spinuphub_item")}}
+                  <div class="column is-one-third-desktop is-full-touch">
+                        <a class="card-link" href="{{page.head.extra.link}}" target="_self">
+                            <div class="card card-one project">
+                                <div class="card-content">
+                                    <h3><span>{{page.head.title}}</span>
+                                    </h3>
+                                    <p>{{{page.body}}}</p>
+
+                                    <span class="button is-rounded is-primary" href="{{page.head.extra.link}}"><strong>Learn
+                                            More</strong></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                {{/each}}
+
+               </div>
+            </section>
+
+       </article>
+
+    </div>
+</main>
+
+{{! This closes the body. See content_bottom.hbs. }}
+{{> content_bottom }}
+
+</body>
+
+</html>

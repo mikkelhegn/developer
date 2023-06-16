@@ -54,6 +54,15 @@ environment = { DESTINATION = "/bartholomew/index" }
 route = "/bartholomew"
 executor = { type = "wagi" }
 
+# Redirect /bartholomew to /bartholomew/index
+[[component]]
+id = "redirect-spinuphub-index"
+source = "modules/redirect.wasm"
+environment = { DESTINATION = "/spinuphub/index" }
+[component.trigger]
+route = "/spinuphub"
+executor = { type = "wagi" }
+
 # Redirect /spin/rust-components/http-trigger to /spin/http-trigger
 [[component]]
 id = "redirect-spin-rust-components-http-trigger"
